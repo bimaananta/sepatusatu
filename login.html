@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/shoes-pic.png" type="image/x-icon">
+    <title>Log In</title>
+</head>
+<style>
+    body{
+        overflow: hidden;
+    }
+    .container-4{
+        height: fit-content;
+    }
+    .contain {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.8;
+        position: absolute;
+        z-index: -999;
+    }
+
+    .main-modal {
+        width: 700px;
+        height: 400px;
+        background-color: white;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.8);
+    }
+    .option-btn{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .option-btn a{
+        width: 320px;
+        height: 50px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    .option-btn a:nth-child(1){
+        background-color: #2f7cf8;
+    }
+    .option-btn a:nth-child(2){
+        background-color: #fd3c32;
+    }
+    .option-btn a:nth-child(1):hover, .option-btn a:nth-child(2):hover{
+        filter: brightness(90%);
+    }
+    .main-modal img{
+        width: 300px;
+    }
+    .konten{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -40px;
+    }
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/shoes-pic.png" width="30">
+            <h1>Sepatu<span>Satu</span></h1>
+        </div>
+        <ul style="opacity: 0;">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Halaman Produk</a></li>
+            <li><a href="#">Kategori Produk</a></li>
+            <li><a href="#">Pilihan Promo</a></li>
+            <li><a href="#">Kontak Kami</a></li>
+        </ul>
+    </nav>
+    <section class="container-4" id="container4">
+        <div class="content">
+            <div class="main-text">
+                <h1>Bergabung Dengan Kami</h1>
+                <p>Bergabung untuk membeli dan membuka fitur-fitur utama, tetaplah terikat dimana saja dan kapan saja. Dapatkan berbagai info dan promo menarik melalui email anda.</p>
+            </div>
+            <div class="login-form">
+                <h2>Login Form</h2>
+                <label for="gmail">Email
+                    <input type="text" name="gmail" id="gmail" placeholder="Enter Your Gmail">
+                </label>
+                <label for="pass">Password
+                    <input type="password" id="pass" placeholder="Enter Your Password">
+                </label>
+                <div class="check">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <a style="cursor: pointer;" id="btnSign">Sign In</a>
+                <a href="register.html" style="background-color: transparent; color:rgb(0, 121, 177);">Belum Punya Akun ? Register</a>
+                <p id="warning"></p>
+            </div>
+        </div>
+    </section>
+    <div class="contain">
+        <div class="overlay"></div>
+        <div class="main-modal">
+            <img src="img/check-list.png">
+            <div class="konten">
+                <h1>Log In Berhasil</h1>
+                <p>Anda Telah Log In Dalam SepatuSatu.com. Selamat Berbelanja.</p>
+                <div class="option-btn">
+                    <a href="main.html">Lanjutkan</a>
+                    <a id="close">Tutup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpBtn = document.getElementById('btnSign');
+        const warn = document.getElementById('warning');
+        const emailInput = document.getElementById('gmail');
+        const passwordInput = document.getElementById('pass');
+        const popUp = document.querySelector('.contain');
+        const closeBtn = document.querySelector('#close'); 
+        signUpBtn.addEventListener('click', () => {
+            let email = emailInput.value;
+            let password = passwordInput.value;
+            if(email.includes("@") && email.includes(".com") && password.length >= 8){
+                warn.style.color = "green";
+                warn.style.textAlign = "center";
+                warn.innerHTML = "Selamat Anda Berhasil Log In!";
+                popUp.style.display = "flex";
+                closeBtn.addEventListener('click', () => {
+                    popUp.style.display = "none";
+                });
+            }
+            else{
+                warn.style.color = "red";
+                warn.style.textAlign = "center";
+                warn.innerHTML = "Email Atau Password Salah!";
+            }
+        })
+
+        const addCart = document.querySelectorAll('#addToCart');
+        const cartImg = document.querySelectorAll('#addToCart img');
+        const textCont = document.querySelectorAll('#addToCart p a');
+        for(let i = 0; i <= cartImg.length; i++){
+            addCart[i].addEventListener('click', () => {
+                cartImg[i].setAttribute('src', 'img/check-mark.png');
+                cartImg[i].classList.add('adjust');
+                textCont[i].innerHTML = "Added";
+                textCont[i].style.fontSize = "15px"
+            })
+        }
+    </script>
+</body>
+</html>

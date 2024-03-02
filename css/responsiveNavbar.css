@@ -1,0 +1,111 @@
+@media screen and (max-width: 1200px){
+    nav ul{
+        width: 70%;
+    }
+}
+
+.toggle{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.toggle span{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 2px;
+    transform-origin: center;
+    transition: 0.3s ease;
+}
+
+@media screen and (max-width: 992px){
+    .logo{
+        font-size: 12px;
+        align-items: center;
+    }
+    nav ul{
+
+    }
+    .product-card .text .star-collection{
+        width: 30%;
+    }
+    nav ul li{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header-up .wrapper #overlayText{
+        font-size: 12px;
+        right: 60%;
+    }
+    nav{
+        
+    }
+    nav ul{
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        opacity: 0;
+        transition: all 0.3s ease;
+        background-color: black;
+    }
+    nav ul li{
+        background-color: black;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.068);
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: all 0.3s ease;
+    }
+    nav ul li:nth-child(1){
+        z-index: 999;
+    }
+    /* nav ul li:nth-child(2){
+        margin-top: 42px;
+    } */
+    #menuToggle{
+        display: block;
+    }
+    .toggle{
+        display: flex;
+        cursor: pointer;
+    }
+    .logo{
+        margin-right: 50%;
+    }
+}
+
+.toggle input{
+    cursor: pointer;
+}
+.toggle input:checked ~ span:nth-child(2){
+    margin-top: 0;
+    transform: rotate(45deg);
+    position: absolute;
+}
+.toggle input:checked ~ span:nth-child(3){
+    display: none;
+}
+
+.toggle input:checked ~ span:nth-child(4){
+    margin-top: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+@media screen and (max-width: 576px){
+    body{
+        overflow-x: hidden;
+    }
+    .logo{
+        margin-right: 20%;
+    }
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;600;700;800&family=Ubuntu:wght@700&display=swap');
+
+
+    body {
+        background-color: white;
+        width: 100%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .VELOCITY {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: black;
+        height: 50px;
+    }
+
+    .harga {
+        color: red;
+    }
+
+    .atas_harga {
+        color: black;
+    }
+
+    .titel {
+        color: white;
+
+    }
+
+    .deskripsi {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 2%;
+        border: 2px solid black;
+    }
+    .list-1{
+        list-style-position: inside;
+    }
+    .deskripsi a{
+        padding: 10px;
+        background-color: black;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        margin-top: 2%;
+        border-radius: 20px;
+    }

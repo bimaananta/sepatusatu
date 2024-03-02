@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/shoes-pic.png" type="image/x-icon">
+    <title>Wolf Golden Brodo</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .review{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .review:nth-child(even){
+        background-color: rgb(248, 248, 248);
+    }
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/shoes-pic.png" width="30">
+            <h1>Sepatu<span>Satu</span></h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="more-products.html">Halaman Produk</a></li>
+            <li><a href="index.html#container2">Kategori Produk</a></li>
+            <li><a href="index.html#container3">Pilihan Promo</a></li>
+            <li><a href="index.html#container5">Kontak Kami</a></li>
+        </ul>
+    </nav>
+
+    <div class="containerr">
+        <div class="content">
+            <img src="img/wolfbrodo.webp" width="400" height="400">
+            <div class="deskripsi">
+                <div class="header">
+                    <p>Product Category / Pantofel</p>
+                    <h1 class="atas_harga">WOLF GOLDEN MODEL BRODO W02</h1>
+                    <h2 class="harga">IDR 370.000</h2>
+                </div>
+                <p>
+                    Sepatu pantofel pria cocok untuk kerja, kantor dan acara formal lainnya.
+                    Sepatu model terbaru di buat dari kulit sapi asli.
+                </p>
+                <ul class="list-1">
+                    <li>Terbuat Dari Kulit Sapi Asli </li>
+                    <li>Sole Bawahnya Terdapat Lapisan Karet </li>
+                    <li>Sol karet kuat dan nyaman.</li>
+                    <li> made Indonesia</li>
+                </ul>
+                <a href="payment.html">Klik Untuk Pemesanan</a>
+            </div>
+            <br>
+            <div class="size">
+                <center>
+                    <h1>WOLF GOLDEN MODEL BRODO W02</h1>
+                    <img src="img/wolfbrodo-size.webp" width="470" height="370">
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="width: 80%; border: none;">
+        <div style="width: 100%;">
+            <h2>Ulasan dan Komentar</h2>
+            <p>Beri ulasan atau lihat ulasan dari orang lain</p>
+        </div>
+        <div class="make-review" style="margin-top: 30px; display: flex; align-items: center; justify-content: space-between;  width: 100%; box-sizing: border-box; height: 200px; padding: 10px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+            <div class="profile" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="wrapper-img" style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden;">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" id="preview" style="width: 60px; height: 60px;">
+                </div>
+                <label for="file" style="display: block; margin-top: 10px; font-size: 12px; width: 90px; height: 30px; background-color:rgb(255, 187, 0); color: white; display: flex; justify-content: center; align-items: center; border-radius: 5px; cursor: pointer;">Choose File</label>
+                <input type="file" name="file" id="file" onchange="fileNameDisplay()" style="display: none;">
+            </div>
+            
+            <div class="text" style="display: flex; flex-direction: column; width: 90%; height: 100%;">
+                <input type="text" placeholder="Nama Pengguna" style="width: 95%; height: 40px; border: none;
+                outline: none; border-bottom: 2px solid black; padding: 0px 5px;" id="username">
+                <div style="display: flex; align-items: center;">
+                    <ul style="margin-top: 5px; list-style: none; height: 20px; width: 100px; display: flex; justify-content: space-between; align-items: flex-end; padding: 0px 5px;">
+                        <li><img src="img/star-user.png" alt="" style="width: 15px; cursor: pointer;" id="starUser"></li>
+                        <li><img src="img/star-user.png" alt="" style="width: 15px; cursor: pointer;" id="starUser"></li>
+                        <li><img src="img/star-user.png" alt="" style="width: 15px; cursor: pointer;" id="starUser"></li>
+                        <li><img src="img/star-user.png" alt="" style="width: 15px; cursor: pointer;" id="starUser"></li>
+                        <li><img src="img/star-user.png" alt="" style="width: 15px; cursor: pointer;" id="starUser"></li>
+                    </ul>
+                    <span id="warning" style="margin-top: 5px; font-size: 12px; margin-left: 5px; display: flex; align-items: center; height: 20px; width: fit-content;"></span>
+                </div>
+                <textarea name="" id="komentar" placeholder="Ketik Ulasan Anda" cols="30" rows="10" style="resize: none; height: 40px; width: 95%; height: 60%; margin-top: 20px; border: none; outline: none;
+                border-bottom: 2px solid black; padding: 0px 5px;"></textarea>
+                <button style="margin-top: 2%; width: 100px; height: 50px; border: none; background-color: rgb(51, 161, 0); color: white; font-family: 'Montserrat'; border-radius: 5px; font-size: 12px; cursor: pointer;" onclick="newComments()">Submit</button>
+            </div>
+        </div>
+        <div class="review"
+            style="margin-top: 30px; display: flex; align-items: center; justify-content: space-between;  width: 100%; box-sizing: border-box; height: fit-content; padding: 10px;">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""
+                style="width: 60px; height: 60px; border-radius: 50%;">
+            <div class="text" style="margin-left: 20px;  height: fit-content; display: flex; flex-direction: column; justify-content: space-between; width: 500px;">
+                <div style="display: flex; flex-direction: column;  height: 45px; justify-content: space-between;">
+                    <h3>Rizal Sungkar</h3>
+                    <ul class="star-collection"
+                        style="display: flex; list-style: none; width: 100px; justify-content: space-between;">
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                    </ul>
+                </div>
+                <p style="font-size: 15px;">Sepatunya keren dan simpel membuat saya terlihat lebih keren dan no need to find about me</p>
+            </div>
+            <div class="review-action" style=" height: 100%; width: 400px; padding: 0px 20px; display: flex; justify-content: space-around; align-items: center;">
+                <img src="img/love4.png" alt="" style="width: 35px; height: 30px;" id="likeComment">
+                <img src="img/star-black.png" alt="" style="width: 35px;" id="starComment">
+                <img src="img/more.png" alt="" style="width: 35px;" id="optionComment">
+            </div>
+        </div>
+        <div class="review"
+            style="margin-top: 10px; display: flex; align-items: center; justify-content: space-between;  width: 100%; box-sizing: border-box; height: fit-content; padding: 10px;">
+            <img src="https://static.wikia.nocookie.net/misterbeast/images/5/5b/MrBeastLogo.jpg" alt=""
+                style="width: 60px; height: 60px; border-radius: 50%;">
+            <div class="text" style="margin-left: 20px;  height: fit-content; display: flex; flex-direction: column; justify-content: space-between; width: 500px;">
+                <div style="display: flex; flex-direction: column;  height: 45px; justify-content: space-between;">
+                    <h3>Mr. Beast</h3>
+                    <ul class="star-collection"
+                        style="display: flex; list-style: none; width: 100px; justify-content: space-between;">
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                    </ul>
+                </div>
+                <p style="font-size: 15px;">Such a great place to buy a new branded local shoes!</p>
+            </div>
+            <div class="review-action" style=" height: 100%; width: 400px; padding: 0px 20px; display: flex; justify-content: space-around;">
+                <img src="img/love4.png" alt="" style="width: 35px; height: 30px;" id="likeComment">
+                <img src="img/star-black.png" alt="" style="width: 35px;" id="starComment">
+                <img src="img/more.png" alt="" style="width: 35px;" id="optionComment">
+            </div>
+        </div>
+        <div class="review"
+            style="margin-top: 10px; display: flex; align-items: center; justify-content: space-between;  width: 100%; box-sizing: border-box; height: fit-content; padding: 10px;">
+            <img src="https://lh3.googleusercontent.com/-BOcn4IbCVhw/YSm9tBwG7RI/AAAAAAAEPG4/sEi1Y63e_3kk_8oohiYiyDvkge08sit0wCLcBGAsYHQ/s1600/053120700_1612863165-1_000_Par1844040.jpg" alt=""
+                style="width: 60px; height: 60px; border-radius: 50%;">
+            <div class="text" style="margin-left: 20px;  height: fit-content; display: flex; flex-direction: column; justify-content: space-between; width: 500px;">
+                <div style="display: flex; flex-direction: column;  height: 45px; justify-content: space-between;">
+                    <h3>Cristiano Ronaldo</h3>
+                    <ul class="star-collection"
+                        style="display: flex; list-style: none; width: 100px; justify-content: space-between;">
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                    </ul>
+                </div>
+                <p style="font-size: 15px;">I love this shoes very much, it will increase my dribbling skills!</p>
+            </div>
+            <div class="review-action" style=" height: 100%; width: 400px; padding: 0px 20px; display: flex; justify-content: space-around;">
+                <img src="img/love4.png" alt="" style="width: 35px; height: 30px;" id="likeComment">
+                <img src="img/star-black.png" alt="" style="width: 35px;" id="starComment">
+                <img src="img/more.png" alt="" style="width: 35px;" id="optionComment">
+            </div>
+        </div>
+        <div class="review"
+            style="margin-top: 10px; display: flex; align-items: center; justify-content: space-between;  width: 100%; box-sizing: border-box; height: fit-content; padding: 10px;">
+            <img src="https://pbs.twimg.com/profile_images/1246588157564293120/TKdAUQBf_400x400.jpg" alt=""
+                style="width: 60px; height: 60px; border-radius: 50%;">
+            <div class="text" style="margin-left: 20px;  height: fit-content; display: flex; flex-direction: column; justify-content: space-between; width: 500px;">
+                <div style="display: flex; flex-direction: column;  height: 45px; justify-content: space-between;">
+                    <h3>Joko Widodo</h3>
+                    <ul class="star-collection"
+                        style="display: flex; list-style: none; width: 100px; justify-content: space-between;">
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                    </ul>
+                </div>
+                <p style="font-size: 15px;">Sepatu yang mengingatkan saya saat masa sekolah, kini saya berikan sepatu ini ke cucu saya</p>
+            </div>
+            <div class="review-action" style=" height: 100%; width: 400px; padding: 0px 20px; display: flex; justify-content: space-around;">
+                <img src="img/love4.png" alt="" style="width: 35px; height: 30px;" id="likeComment">
+                <img src="img/star-black.png" alt="" style="width: 35px;" id="starComment">
+                <img src="img/more.png" alt="" style="width: 35px;" id="optionComment">
+            </div>
+        </div>
+        <div class="review"
+            style="margin-top: 10px; display: flex; align-items: center; justify-content: space-between;  width: 100%; box-sizing: border-box; height: fit-content; padding: 10px;">
+            <img src="https://milkeninstitute.org/sites/default/files/grid/speakers/0031U000025OmzwQAC-ee35db5d9c04c1c5aaa404b0b52b5d3c.png" alt=""
+                style="width: 60px; height: 60px; border-radius: 50%;">
+            <div class="text" style="margin-left: 20px;  height: fit-content; display: flex; flex-direction: column; justify-content: space-between; width: 500px;">
+                <div style="display: flex; flex-direction: column;  height: 45px; justify-content: space-between;">
+                    <h3>Sandiaga Uno</h3>
+                    <ul class="star-collection"
+                        style="display: flex; list-style: none; width: 100px; justify-content: space-between;">
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                        <li><img src="img/star.png" style="width: 15px;" alt=""></li>
+                    </ul>
+                </div>
+                <p style="font-size: 15px;">Selalu mendukung produk lokal dan UMKM! Salam dari Kementerian Pariwisata dan Ekonomi Kreatif</p>
+            </div>
+            <div class="review-action" style=" height: 100%; width: 400px; padding: 0px 20px; display: flex; justify-content: space-around;">
+                <img src="img/love4.png" alt="" style="width: 35px; height: 30px;" id="likeComment">
+                <img src="img/star-black.png" alt="" style="width: 35px;" id="starComment">
+                <img src="img/more.png" alt="" style="width: 35px;" id="optionComment">
+            </div>
+        </div>
+        <div class="review" id="newComment"
+            style="margin-top: 10px; display: flex; align-items: center; justify-content: space-between;  width: 100%; box-sizing: border-box; height: fit-content; padding: 10px; display: none;">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""
+                style="width: 60px; height: 60px; border-radius: 50%;" id="profilePic">
+            <div class="text" style="margin-left: 20px;  height: fit-content; display: flex; flex-direction: column; justify-content: space-between; width: 500px;">
+                <div style="display: flex; flex-direction: column;  height: 45px; justify-content: space-between;">
+                    <h3>Rizal Sungkar</h3>
+                    <ul class="star-collection" id="parent" style="display: flex; list-style: none; width: 100px; justify-content: space-between;">
+                        <li><img src="img/star-user.png" style="width: 15px;" alt="" id="starRev"></li>
+                        <li><img src="img/star-user.png" style="width: 15px;" alt="" id="starRev"></li>
+                        <li><img src="img/star-user.png" style="width: 15px;" alt="" id="starRev"></li>
+                        <li><img src="img/star-user.png" style="width: 15px;" alt="" id="starRev"></li>
+                        <li><img src="img/star-user.png" style="width: 15px;" alt="" id="starRev"></li>
+                    </ul>
+                </div>
+                <p style="font-size: 15px;">Sepatunya keren dan simpel membuat saya terlihat lebih keren dan no need to find about me</p>
+            </div>
+            <div class="review-action" style=" height: 100%; width: 400px; padding: 0px 20px; display: flex; justify-content: space-around; align-items: center;">
+                <img src="img/love4.png" alt="" style="width: 35px; height: 30px;" id="likeComment">
+                <img src="img/star-black.png" alt="" style="width: 35px;" id="starComment">
+                <img src="img/more.png" alt="" style="width: 35px;" id="optionComment">
+            </div>
+        </div>
+    </div>
+    <footer style="margin-top: 100px;">
+        <div class="about-us">
+            <h2>About Us</h2>
+            <hr>
+            <p>SepatuSatu adalah website E-Commerce yang berfokus menyediakan produk sepatu lokal berkualitas dan dengan
+                harga terjangkau.</p>
+            <ul>
+                <li><a href="https://www.instagram.com/rizalmuzaki_11/" target="_blank"><img src="img/instagram.png"></a></li>
+                <li><a href="#"><img src="img/facebook1.png"></a></li>
+                <li><a href="https://twitter.com/SayaBukanSJW" target="_blank"><img src="img/TWITTER.png"></a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <hr>
+            <ul class="main">
+                <li>Telp. 0813-8143-1632</li>
+                <li>www.bimaananta.github.io</li>
+                <li>albaihaqibimaananta@gmail.com</li>
+                <li>Jl. Batu III, RT. 6/RW. 1, Gambir, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota
+                    Jakarta</li>
+            </ul>
+        </div>
+        <div class="term">
+            <h2>Term Of Service</h2>
+            <hr style="width: 220px">
+            <ul class="main">
+                <li>Ketentuan Layanan</li>
+                <li>Kebijakan Privasi</li>
+                <li>Bantuan</li>
+                <li>Customer Service</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/comment.js"></script>
+</body>
+
+</html>

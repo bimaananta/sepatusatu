@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .parallax-container {
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      perspective: 1px;
+      /* Untuk efek 3D parallax (opsional) */
+    }
+
+    .parallax-layer {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+
+    .background {
+      background: url('../img/header.jpg') center/cover no-repeat fixed;
+      z-index: -1;
+      /* Letakkan di belakang elemen lain */
+    }
+
+    .content {
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      margin-top: 50vh;
+      /* Untuk memberikan ruang agar teks tidak bertumpuk di atas gambar latar belakang */
+    }
+    .box-container{
+      width: 100%;
+      padding: 20px;
+      border: 1px solid black;
+      display: flex;
+    }
+    .box-container .box{
+      width: 90px;
+      height: 90px;
+      background-color: red;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box-container">
+    <div class="box" id="boxes"></div>
+  </div>
+  <script src="app.js"></script>
+  <!-- <script>
+    const boxFirst = document.querySelector('#boxes');
+    const boxContainer = document.querySelector('.box-container');
+    const secondBox = boxFirst.cloneNode(true);
+
+    boxContainer.appendChild(secondBox);
+
+
+
+    function toCamelCase(str) {
+      let newStr = [];
+      let newStr2 = [];
+      for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) === "-") {
+          newStr = str.split("-");
+          for(let i = 0; i < newStr.length; i++){
+            newStr[i] = newStr[i].split("_");
+            if(newStr[i].split("_")){
+              
+            }
+          }
+
+        }
+        // else if (str.charAt(i) === "_") {
+        //   newStr = str.split("_");
+        // }
+      }
+      return newStr;
+      for (let i = 0; i < newStr.length; i++) {
+        newStr2.push(newStr[i].split(''));
+      }
+
+      for(let i = 1; i < 3; i++){
+        newStr2[i][0] = newStr2[i][0].toUpperCase();
+      }
+      
+      let stringResult = "";
+      for(let i = 0; i < newStr2.length; i++){
+        for(let j = 0; j < newStr2[i].length; j++){
+          stringResult += newStr2[i][j];
+        }
+      }
+      return stringResult;
+    }
+    console.log(toCamelCase("The-comment_use"))
+  </script> -->
+</body>
+
+</html>

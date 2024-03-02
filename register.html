@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+<style>
+    body{
+        overflow: hidden;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        margin-top: 0px;
+    }
+    .register-form{
+        width: 450px;
+        height: 500px;
+        background-color: white;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.096), -5px -5px 5px rgba(0, 0, 0, 0.096);
+        font-family: 'Poppins', sans-serif;
+        padding: 20px;
+        margin-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .register-form h2{
+        margin-right: auto;
+        margin-left: auto;
+        font-weight: 500;
+    }
+    .register-form label{
+        text-align: left;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .row input{
+        height: 14px;
+        border: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        font-family: 'Poppins', sans-serif;
+        padding: 5px;
+    }
+    .background{
+        position: absolute;
+        z-index: -999;
+        width: 100%;
+        filter: brightness(40%);
+    }
+    .agreement{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 13px;
+    }
+    .agreement input {
+        accent-color: black;
+    }
+    .agreement label{
+        margin-left: 10px;
+    }
+    .contain {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.582);
+        position: absolute;
+        z-index: 1;
+    }
+
+    .main-modal {
+        width: 700px;
+        height: 400px;
+        background-color: white;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transform: scale(0.8);
+    }
+    .option-btn{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .option-btn a{
+        width: 320px;
+        height: 50px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    .option-btn a:nth-child(1){
+        background-color: #2f7cf8;
+    }
+    .option-btn a:nth-child(2){
+        background-color: #fd3c32;
+    }
+    .option-btn a:nth-child(1):hover, .option-btn a:nth-child(2):hover{
+        filter: brightness(90%);
+    }
+    .main-modal img{
+        width: 300px;
+    }
+    .konten{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -40px;
+    }
+</style>
+<body>
+    <img src="img/header.jpg" class="background">
+    <nav>
+        <div class="logo">
+            <img src="img/shoes-pic.png" width="30">
+            <h1>Sepatu<span>Satu</span></h1>
+        </div>
+        <ul style="opacity: 0;">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="more-products.html">Halaman Produk</a></li>
+            <li><a href="index.html#container2">Kategori Produk</a></li>
+            <li><a href="index.html#container3">Pilihan Promo</a></li>
+            <li><a href="index.html#container5">Kontak Kami</a></li>
+        </ul>
+    </nav>
+    <div class="contain" id="success">
+        <div class="overlay"></div>
+        <div class="main-modal">
+            <img src="img/check-list.png">
+            <div class="konten">
+                <h1>Registrasi Berhasil</h1>
+                <p>Anda Telah Terdaftar Dalam SepatuSatu.com. Lanjutkan untuk Log in dan Berbelanja.</p>
+                <div class="option-btn">
+                    <a href="login.html">Lanjutkan</a>
+                    <a id="close">Tutup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contain" id="failed">
+        <div class="overlay"></div>
+        <div class="main-modal">
+            <img src="img/incorrect.png" style="width: 200px;">
+            <div class="konten" style="margin-top: 40px; text-align: center;">
+                <h1>Registrasi Gagal</h1>
+                <p>Pastikan Anda Mengisi Biodata Dengan Benar dan menggunakan data yang Valid.</p>
+                <div class="option-btn"style="justify-content: center;">
+                    <a id="close">Tutup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <form class="register-form">
+            <div class="header">
+                <h2>Register Form</h2>
+                <p>Create Your SepatuSatu Acoount</p>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first" id="first-name" placeholder="First Name" class="input">
+                </div>
+                <div class="row">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last" id="last-name" placeholder="Last Name" class="input">
+                </div>
+                <div class="row">
+                    <label for="number">Phone Number</label>
+                    <input type="text" name="number" id="number" placeholder="Phone Number" class="input">
+                </div>
+                <div class="row">
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email" placeholder="Email Address" class="input">
+                </div>
+                <div class="row">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" class="input">
+                </div>
+                <div class="row">
+                    <label for="confirm">Confirm Password</label>
+                    <input type="password" name="password" id="password" placeholder="Confirm Pasword" class="input">
+                </div>
+                <div class="agreement">
+                    <input type="checkbox" name="agree" id="agree">
+                    <label for="agree">Saya Menyutujui Syarat dan Ketentuan dari SepatuSatu.com</label>
+                </div>
+            </div>
+            <a class="regist" style="cursor: pointer;">Register</a>
+        </form>
+    </div>
+    <script>
+        const regButton = document.querySelector('.regist');
+        const popUpSucces = document.querySelector('#success');
+        const popUpFailed = document.querySelector('#failed');
+        const popUp = document.querySelectorAll('.contain');
+        const closeBtn = document.querySelectorAll('#close');
+        const allInput = document.querySelectorAll('.input');
+        const agreement = document.getElementById('agree');
+        regButton.addEventListener('click', function() {
+            let allInputValue = [];
+            let isSuccess;
+            allInputValue.push(allInput[0].value);
+            allInputValue.push(allInput[1].value);
+            allInputValue.push(allInput[2].value);
+            allInputValue.push(allInput[3].value);
+            allInputValue.push(allInput[4].value);
+            allInputValue.push(allInput[5].value);
+            for(let i = 0; i <= allInputValue.length; i++){
+                if(allInputValue[i] === "" || allInputValue[4] !== allInputValue[5] || !agreement.checked){
+                    popUpFailed.style.display = "flex";
+                    console.log(0);
+                    break;
+                }
+                else{
+                    if(i < 6){
+                        isSuccess = true;
+                        console.log(isSuccess);
+                    }
+                    else if(i === 6 && isSuccess === true){
+                        popUpSucces.style.display = "flex";
+                        console.log(1);
+                        break;
+                    }
+                }
+            }
+            
+        });
+        for(let i = 0; i <= 5; i++){
+            closeBtn[i].addEventListener('click', function(){
+                popUp[i].style.display = "none";
+            })
+        }
+    </script>
+</body>
+</html>

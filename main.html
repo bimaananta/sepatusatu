@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsiveIndex.css">
+    <link rel="shortcut icon" href="img/shoes-pic.png" type="image/x-icon">
+    <title>SepatuSatu Official Store</title>
+</head>
+<style>
+    .contain {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.8;
+        position: absolute;
+        z-index: -999;
+    }
+
+    .main-modal {
+        width: 700px;
+        height: 400px;
+        background-color: white;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .option-btn {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .option-btn a {
+        width: 320px;
+        height: 50px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .option-btn a:nth-child(1) {
+        background-color: #2f7cf8;
+    }
+
+    .option-btn a:nth-child(2) {
+        background-color: #fd3c32;
+    }
+
+    .option-btn a:nth-child(1):hover,
+    .option-btn a:nth-child(2):hover {
+        filter: brightness(90%);
+    }
+
+    .main-modal img {
+        width: 300px;
+    }
+
+    .konten {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -40px;
+    }
+
+    .product-card {
+        box-shadow: none;
+    }
+    #addToCart p a {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/shoes-pic.png" width="30">
+            <h1>Sepatu<span>Satu</span></h1>
+        </div>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="https://youtube.com">Halaman Produk</a></li>
+            <li><a href="#container2">Kategori Produk</a></li>
+            <li><a href="#container3">Pilihan Promo</a></li>
+            <li><a href="#container5">Kontak Kami</a></li>
+        </ul>
+        <div class="toggle" id="burger">
+            <input type="checkbox" name="check" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="header-up">
+            <div class="wrapper" style="overflow: hidden; position: relative;">
+                <div id="overlayText">
+                    <h1>SepatuSatu</h1>
+                    <p>Dapatkan Sepatu Lokal Dengan Kualitas Terbaik.</p>
+                </div>
+                <img src="img/header.jpg">
+            </div>
+        </div>
+        <div class="product-collection">
+            <div class="product-card">
+                <div class="content">
+                    <div class="wrapper">
+                        <img src="img/ventela-product.jpg">
+                    </div>
+                    <div class="text">
+                        <h6>Product Category / Sneakers</h6>
+                        <h2>Ventela Sneakers</h2>
+                        <div class="star-collection">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                        </div>
+                        <h3>Rp. 250.000</h3>
+                        <p class="description">Ventela dengan style yang lebih casual friendly, cocok digunakan untuk
+                            bersekolah,
+                            berpetualang bersama teman-temanmu</p>
+                        <br>
+                        <div class="row">
+                            <button><a href="detail_ventela.html">More</a></button>
+                            <div id="addToCart">
+                                <img src="img/cart-icon.png" id="cart">
+                                <p><a>Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card second">
+                <div class="content">
+                    <div class="wrapper">
+                        <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/11/f8f7a6ee-af00-4368-987b-1d83ac731058.jpg">
+                    </div>
+                    <div class="text">
+                        <h6>Product Category / Sneakers</h6>
+                        <h2>Compass Sneakers</h2>
+                        <div class="star-collection">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                        </div>
+                        <h3>Rp. 798.000</h3>
+                        <p class="description">Nama VELOCITY bila didefinisikan, adalah kecepatan arah suatu benda yang
+                            bergerak; ini adalah
+                            seruan
+                            kami agar masyarakat terus bergerak maju</p>
+                        <br>
+                        <div class="row">
+                            <button><a href="detail_compass.html">More</a></button>
+                            <div id="addToCart">
+                                <img src="img/cart-icon.png" id="cart">
+                                <p><a style="cursor: pointer;">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="content">
+                    <div class="wrapper" style="overflow: hidden;">
+                        <img src="img/aerostreet.jpg"
+                            style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.1);">
+                    </div>
+                    <div class="text">
+                        <h6>Product Category / Sneakers</h6>
+                        <h2>Aerostreet Sneakers</h2>
+                        <div class="star-collection">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                            <img src="img/star.png">
+                        </div>
+                        <h3>Rp. 140.000</h3>
+                        <p class="description">TIDAK AKAN JEBOL setelah dicuci atau kehujanan karena menggunakan
+                            technologi baru Shoes
+                            Injection Mould bahan sole dicairkan dengan tekanan tinggi</p>
+                        <br>
+                        <div class="row">
+                            <button><a href="detail_aero.html">More</a></button>
+                            <div id="addToCart">
+                                <img src="img/cart-icon.png" id="cart">
+                                <p><a style="cursor: pointer;">Add To Cart</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 id="more"><a href="more-products.html">More Products >></a></h2>
+    </section>
+    <section class="container-2" id="container2">
+        <h1 style="font-size: 30px;">Product Category</h1>
+        <div id="explain">
+            <p>Sepatu di kelompokkan menjadi 4 kategori sesuai dengan fungsional, kebutuhan fashion, dan formalitas,
+                silahkan dipilih sesuka hati. Range harga berkisar 200 ribu hingga 900 ribu rupiah termasuk diskon dan
+                biaya pajak</p>
+        </div>
+        <div class="category-collection">
+            <a href="sneakers_category.html">
+                <div class="category-card">
+                    <div class="wrapper">
+                        <h2>Sneakers</h2>
+                        <img src="img/ventela-category.jpg">
+                    </div>
+                </div>
+            </a>
+            <a href="slipon_category.html">
+                <div class="category-card">
+                    <div class="wrapper">
+                        <h2>Slip - On</h2>
+                        <img src="img/category-slipOn.webp">
+                    </div>
+                </div>
+            </a>
+            <a href="boots_category.html">
+                <div class="category-card">
+                    <div class="wrapper" class="animated">
+                        <h2 style="left: 190px;">Boots</h2>
+                        <img src="img/category-boots.jpg" style="transform: translate(0px, 0px);"
+                            class="animated-target">
+                    </div>
+                </div>
+            </a>
+            <a href="pantofel_category.html">
+                <div class="category-card">
+                    <div class="wrapper">
+                        <h2>Pantofel</h2>
+                        <img src="img/category-pantofel.jpg">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="container-3" id="container3">
+        <h1 style="font-size: 30px;">Sale And Discount</h1>
+        <div class="discount-left">
+            <div class="wrapper">
+                <img src="img/promo1.webp">
+            </div>
+            <div class="main-text">
+                <h2>Dapatkan Diskon 30% Dengan Berlangganan</h2>
+                <p>Selalu dapatkan produk terbaru dari SepatuSatu dengan berlangganan, dapatkan diskon sebesar 30% untuk
+                    setiap pembelian dalam rentang waktu 1-4 minggu. Diskon 40% dengan berlangganan selama kurang lebih
+                    6 bulan tanpa pembatalan pembayaran.</p>
+            </div>
+        </div>
+        <div class="discount-right">
+            <img src="img/promo2.jpg">
+            <div class="main-text">
+                <h2>Dapatkan Diskon 10% Dengan Refferal Code</h2>
+                <p>Bagikan pengalamanmu berbelanja di SepatuSatu dengan mengirim kode refferal. Diskon 10% akan
+                    diberikan jika setidaknya 5 temanmu memasukkan kode refferalmu. Diskon akan bertambah seiring
+                    bertambahnya jumlah penggunaan refferal dengan batas diskon 30%</p>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="container-4" id="container4">
+        <div class="content">
+            <div class="main-text">
+                <h1>Bergabung Dengan Kami</h1>
+                <p>Bergabung untuk membeli dan membuka fitur-fitur utama, tetaplah terikat dimana saja dan kapan saja.
+                    Dapatkan berbagai info dan promo menarik melalui email anda.</p>
+            </div>
+            <div class="login-form">
+                <h2>Login Form</h2>
+                <label for="gmail">Email
+                    <input type="text" name="gmail" id="gmail" placeholder="Enter Your Gmail">
+                </label>
+                <label for="pass">Password
+                    <input type="password" id="pass" placeholder="Enter Your Password">
+                </label>
+                <div class="check">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <a style="cursor: pointer;" id="btnSign">Sign In</a>
+                <a href="#" id="google">
+                    <img src="img/google.png">
+                    Lanjutkan Dengan Google
+                </a>
+                <a href="register.html" style="background-color: transparent; color:rgb(0, 121, 177);">Belum Punya Akun
+                    ? Register</a>
+                <p id="warning"></p>
+            </div>
+        </div>
+    </section> -->
+    <section class="container-5" id="container5">
+        <div class="contact-form">
+            <div class="contact">
+                <div class="form-contact">
+                    <h1>Contact Us</h1>
+                    <div class="row">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="row">
+                        <label for="name">Email</label>
+                        <input type="text" name="gmail" id="gmail" placeholder="Your Email">
+                    </div>
+                    <div class="row">
+                        <label for="name">Phone Number</label>
+                        <input type="text" name="telp" id="telp" placeholder="Phone Number">
+                    </div>
+                </div>
+                <div class="comments" style="width: 100%; display: flex; flex-direction: column;">
+                    <h3>Your Message</h3>
+                    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <button style="margin-top: 2%; width: 120px; height: 40px; border: none; background-color: rgb(51, 161, 0); color: white; font-family: 'Montserrat'; border-radius: 5px; font-size: 15px;">Submit</button>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="row">
+                    <img src="img/locatio.png" alt="">
+                    <h2>Address</h2>
+                    <p>North Jakarta, West Java, Indonesia</p>
+                </div>
+                <div class="row">
+                    <img src="img/phone.png" alt="">
+                    <h2>Phone</h2>
+                    <p>+62-813-8143-1632</p>
+                </div>
+                <div class="row">
+                    <img src="img/email.png" alt="">
+                    <h2>Email</h2>
+                    <p>albaihaqibimaaananta@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="about-us">
+            <h2>About Us</h2>
+            <hr>
+            <p>SepatuSatu adalah website E-Commerce yang berfokus menyediakan produk sepatu lokal berkualitas dan dengan
+                harga terjangkau.</p>
+            <ul>
+                <li><a href="https://www.instagram.com/rizalmuzaki_11/" target="_blank"><img src="img/instagram.png"></a></li>
+                <li><a href="#"><img src="img/facebook1.png"></a></li>
+                <li><a href="https://twitter.com/SayaBukanSJW" target="_blank"><img src="img/TWITTER.png"></a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <hr>
+            <ul class="main">
+                <li>Telp. 0813-8143-1632</li>
+                <li>www.bimaananta.github.io</li>
+                <li>albaihaqibimaananta@gmail.com</li>
+                <li>Jl. Batu III, RT. 6/RW. 1, Gambir, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota
+                    Jakarta</li>
+            </ul>
+        </div>
+        <div class="term">
+            <h2>Term Of Service</h2>
+            <hr style="width: 220px">
+            <ul class="main">
+                <li>Ketentuan Layanan</li>
+                <li>Kebijakan Privasi</li>
+                <li>Bantuan</li>
+                <li>Customer Service</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="contain">
+        <div class="overlay"></div>
+        <div class="main-modal">
+            <img src="img/check-list.png">
+            <div class="konten">
+                <h1>Log In Berhasil</h1>
+                <p>Anda Telah Log In Dalam SepatuSatu.com. Selamat Berbelanja.</p>
+                <div class="option-btn">
+                    <a href="more-products.html">Lanjutkan</a>
+                    <a id="close">Tutup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpBtn = document.getElementById('btnSign');
+        const warn = document.getElementById('warning');
+        const emailInput = document.getElementById('gmail');
+        const passwordInput = document.getElementById('pass');
+        const popUp = document.querySelector('.contain');
+        const closeBtn = document.querySelector('#close');
+        signUpBtn.addEventListener('click', () => {
+            let email = emailInput.value;
+            let password = passwordInput.value;
+            if (email.includes("@") && email.includes(".com") && password.length >= 8) {
+                warn.style.color = "green";
+                warn.style.textAlign = "center";
+                warn.innerHTML = "Selamat Anda Berhasil Log In!";
+                popUp.style.display = "flex";
+                closeBtn.addEventListener('click', () => {
+                    popUp.style.display = "none";
+                });
+            }
+            else {
+                warn.style.color = "red";
+                warn.style.textAlign = "center";
+                warn.innerHTML = "Email Atau Password Salah!";
+            }
+        })
+    </script>
+    <script src="js/cart.js"></script>
+    <script src="js/responsiveNavbar.js"></script>
+</body>
+
+</html>
